@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Video</title>
+  <meta charset="UTF-8">
+  <title>Fullscreen Video</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       background-color: black;
+      overflow: hidden;
     }
+
     video {
-      width: 100vw;
-      height: 100vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
       object-fit: cover;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop>
-    <source src="video.mp4" type="video/mp4" />
+  <video autoplay muted playsinline>
+    <source src="video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </body>
