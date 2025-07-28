@@ -1,29 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Video Player</title>
+  <title>Full Screen Video</title>
   <style>
-    body {
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
     }
     video {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 12px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
-  <video controls autoplay>
+  <video autoplay muted controls>
     <source src="video.mp4" type="video/mp4">
-    Trình duyệt của bạn không hỗ trợ phát video.
+    Your browser does not support HTML5 video.
   </video>
 </body>
 </html>
